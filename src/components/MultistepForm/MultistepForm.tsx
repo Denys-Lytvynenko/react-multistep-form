@@ -3,6 +3,7 @@ import { FC, FormEvent, useState } from "react";
 import { useMultistepForm } from "./hooks/useMultistepForm";
 import { FormData } from "./types";
 
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 import AccountForm from "../AccountForm/AccountForm";
 import AddressForm from "../AddressForm/AddressForm";
 import UserForm from "../UserForm/UserForm";
@@ -54,15 +55,10 @@ const MultistepForm: FC = () => {
     return (
         <div className="multistep-form">
             <form onSubmit={submitHandler}>
-                <div
-                    style={{
-                        position: "absolute",
-                        top: ".5rem",
-                        right: ".5rem",
-                    }}
-                >
-                    {currentStepIndex + 1} / {steps.length}
-                </div>
+                <ProgressBar
+                    currentStep={currentStepIndex + 1}
+                    allSteps={steps.length}
+                />
 
                 {step}
 
