@@ -3,6 +3,7 @@ import { FC } from "react";
 import { UserFormProps } from "./types";
 
 import FormWrapper from "../FormWrapper/FormWrapper";
+import Field from "../MultistepForm/components/Field/Field";
 
 const UserForm: FC<UserFormProps> = ({
     firstName,
@@ -11,34 +12,34 @@ const UserForm: FC<UserFormProps> = ({
     updateFields,
 }) => (
     <FormWrapper title="User form">
-        <label htmlFor="firstName">First Name</label>
-        <input
+        <Field
+            label="First name"
             type="text"
-            autoFocus
-            required
-            id="firstName"
+            name="firstName"
             value={firstName}
             onChange={(e) => updateFields({ firstName: e.target.value })}
+            autoFocus
+            required
         />
 
-        <label htmlFor="lastName">Last Name</label>
-        <input
+        <Field
+            label="Last name"
             type="text"
-            required
-            id="lastName"
+            name="lastName"
             value={lastName}
             onChange={(e) => updateFields({ lastName: e.target.value })}
+            required
         />
 
-        <label htmlFor="age">Age</label>
-        <input
+        <Field
+            label="Age"
             type="number"
-            required
-            min={1}
-            max={150}
-            id="age"
+            name="age"
             value={age}
             onChange={(e) => updateFields({ age: e.target.value })}
+            min={1}
+            max={130}
+            required
         />
     </FormWrapper>
 );

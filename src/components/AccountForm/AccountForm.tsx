@@ -3,6 +3,7 @@ import { FC } from "react";
 import { AccountFormProps } from "./types";
 
 import FormWrapper from "../FormWrapper/FormWrapper";
+import Field from "../MultistepForm/components/Field/Field";
 
 const AccountForm: FC<AccountFormProps> = ({
     email,
@@ -10,23 +11,23 @@ const AccountForm: FC<AccountFormProps> = ({
     updateFields,
 }) => (
     <FormWrapper title="Account form">
-        <label htmlFor="email">Email</label>
-        <input
-            type="text"
-            autoFocus
-            required
-            id="email"
+        <Field
+            label="Email"
+            type="email"
+            name="email"
             value={email}
             onChange={(e) => updateFields({ email: e.target.value })}
+            autoFocus
+            required
         />
 
-        <label htmlFor="password">Password</label>
-        <input
-            type="text"
-            required
-            id="password"
+        <Field
+            label="Password"
+            type="password"
+            name="password"
             value={password}
             onChange={(e) => updateFields({ password: e.target.value })}
+            required
         />
     </FormWrapper>
 );

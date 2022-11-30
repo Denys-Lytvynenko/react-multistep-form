@@ -1,6 +1,9 @@
 import { FC } from "react";
-import FormWrapper from "../FormWrapper/FormWrapper";
+
 import { AddressFormProps } from "./types";
+
+import FormWrapper from "../FormWrapper/FormWrapper";
+import Field from "../MultistepForm/components/Field/Field";
 
 const AddressForm: FC<AddressFormProps> = ({
     street,
@@ -9,32 +12,32 @@ const AddressForm: FC<AddressFormProps> = ({
     updateFields,
 }) => (
     <FormWrapper title="Address form">
-        <label htmlFor="street">Street</label>
-        <input
+        <Field
+            label="Street"
             type="text"
-            autoFocus
-            required
-            id="street"
+            name="street"
             value={street}
             onChange={(e) => updateFields({ street: e.target.value })}
+            autoFocus
+            required
         />
 
-        <label htmlFor="city">City</label>
-        <input
+        <Field
+            label="City"
             type="text"
-            required
-            id="city"
+            name="city"
             value={city}
             onChange={(e) => updateFields({ city: e.target.value })}
+            required
         />
 
-        <label htmlFor="zip">Zip</label>
-        <input
-            type="text"
-            required
-            id="zip"
+        <Field
+            label="Zip"
+            type="number"
+            name="zip"
             value={zip}
             onChange={(e) => updateFields({ zip: e.target.value })}
+            required
         />
     </FormWrapper>
 );
