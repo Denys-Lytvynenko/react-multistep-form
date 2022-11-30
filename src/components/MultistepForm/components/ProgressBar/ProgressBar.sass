@@ -1,7 +1,4 @@
-@import "../../vars.sass"
-
-$disabledColor: #EFF0F6
-$activeColor: #4A3AFF
+@import "../../vars"
 
 .progress-bar
     display: flex
@@ -19,13 +16,13 @@ $activeColor: #4A3AFF
         width: 2rem
         height: 2rem
         border-radius: 50%
-        background-color: $disabledColor
-        color: #6F6C90
+        background-color: $disabledBGColor
+        color: $disabledColor
         transition: all .3s cubic-bezier(1,.1,.82,-0.05)
 
         &.active
-            background-color: $activeColor
-            color: #FFFFFF
+            background-color: $activeBGColor
+            color: $activeColor
 
     &__chain
         display: flex
@@ -33,14 +30,14 @@ $activeColor: #4A3AFF
         flex-grow: 1
         height: 0.5em
         border-radius: 0.5em
-        background-color: $disabledColor
+        background-color: $disabledBGColor
 
         &::before
             content: ""
             width: 0
             height: 0.5em
             border-radius: 0.5em
-            background-color: $activeColor
+            background-color: $activeBGColor
             transition: $transition
 
         &.active

@@ -3,10 +3,11 @@ import { FC, FormEvent, useState } from "react";
 import { useMultistepForm } from "./hooks/useMultistepForm";
 import { FormData } from "./types";
 
-import ProgressBar from "./components/ProgressBar/ProgressBar";
 import AccountForm from "../AccountForm/AccountForm";
 import AddressForm from "../AddressForm/AddressForm";
 import UserForm from "../UserForm/UserForm";
+import Button from "./components/Button/Button";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
 
 import "./MultistepForm.sass";
 
@@ -62,23 +63,20 @@ const MultistepForm: FC = () => {
 
                 {step}
 
-                <div
-                    style={{
-                        marginTop: "1rem",
-                        display: "flex",
-                        gap: ".5rem",
-                        justifyContent: "flex-end",
-                    }}
-                >
+                <div className="multistep-form__button-wrapper">
                     {!isFirstStep && (
-                        <button type="button" onClick={back}>
+                        <Button
+                            type="button"
+                            onClick={back}
+                            disabled={isFirstStep}
+                        >
                             Back
-                        </button>
+                        </Button>
                     )}
 
-                    <button type="submit">
+                    <Button type="submit" disabled={false}>
                         {isLastStep ? "Finish" : "Next"}
-                    </button>
+                    </Button>
                 </div>
             </form>
         </div>
