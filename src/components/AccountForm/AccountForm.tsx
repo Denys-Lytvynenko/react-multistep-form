@@ -1,14 +1,8 @@
 import { FC } from "react";
-import FormWrapper from "./FormWrapper";
 
-type AccountData = {
-    email: string;
-    password: string;
-};
+import { AccountFormProps } from "./types";
 
-type AccountFormProps = AccountData & {
-    updateFields: (fields: Partial<AccountData>) => void;
-};
+import FormWrapper from "../FormWrapper/FormWrapper";
 
 const AccountForm: FC<AccountFormProps> = ({
     email,

@@ -1,15 +1,6 @@
 import { FC } from "react";
-import FormWrapper from "./FormWrapper";
-
-type AddressData = {
-    street: string;
-    city: string;
-    zip: string;
-};
-
-type AddressFormProps = AddressData & {
-    updateFields: (fields: Partial<AddressData>) => void;
-};
+import FormWrapper from "../FormWrapper/FormWrapper";
+import { AddressFormProps } from "./types";
 
 const AddressForm: FC<AddressFormProps> = ({
     street,

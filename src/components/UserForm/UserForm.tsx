@@ -1,15 +1,8 @@
 import { FC } from "react";
-import FormWrapper from "./FormWrapper";
 
-type UserData = {
-    firstName: string;
-    lastName: string;
-    age: string;
-};
+import { UserFormProps } from "./types";
 
-type UserFormProps = UserData & {
-    updateFields: (fields: Partial<UserData>) => void;
-};
+import FormWrapper from "../FormWrapper/FormWrapper";
 
 const UserForm: FC<UserFormProps> = ({
     firstName,

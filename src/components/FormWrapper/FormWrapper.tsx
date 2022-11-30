@@ -1,9 +1,6 @@
-import React, { FC, ReactNode } from "react";
+import { FC } from "react";
 
-type FormWrapperProps = {
-    title: string;
-    children: ReactNode;
-};
+import { FormWrapperProps } from "./types";
 
 const FormWrapper: FC<FormWrapperProps> = ({ title, children }) => {
     return (
