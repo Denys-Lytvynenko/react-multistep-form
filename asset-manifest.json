@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.49545aff.css",
-    "main.js": "/static/js/main.8cf3298b.js",
-    "static/media/Inter-Regular.ttf": "/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
-    "static/media/bg_pattern.svg": "/static/media/bg_pattern.cf841636886681dd6efd.svg",
-    "index.html": "/index.html",
-    "main.49545aff.css.map": "/static/css/main.49545aff.css.map",
-    "main.8cf3298b.js.map": "/static/js/main.8cf3298b.js.map"
+    "main.css": "/react-multistep-form/static/css/main.b9697d69.css",
+    "main.js": "/react-multistep-form/static/js/main.8cf3298b.js",
+    "static/media/Inter-Regular.ttf": "/react-multistep-form/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
+    "index.html": "/react-multistep-form/index.html",
+    "static/media/bg_pattern.svg": "/react-multistep-form/static/media/bg_pattern.cf841636886681dd6efd.svg",
+    "main.b9697d69.css.map": "/react-multistep-form/static/css/main.b9697d69.css.map",
+    "main.8cf3298b.js.map": "/react-multistep-form/static/js/main.8cf3298b.js.map"
   },
   "entrypoints": [
-    "static/css/main.49545aff.css",
+    "static/css/main.b9697d69.css",
     "static/js/main.8cf3298b.js"
   ]
 }
