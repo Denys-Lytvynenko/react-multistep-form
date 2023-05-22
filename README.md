@@ -1,6 +1,6 @@
 # React multistep form
 
-React multistep form component.
+React multistep form component ([Demo](https://denys-lytvynenko.github.io/react-multistep-form/)).
 
 ![Multistep form first image](./src/images/form_first_screen.jpg)
 
